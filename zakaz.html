@@ -51,16 +51,16 @@
 		
 			<h2>Оформить заказ</h2>
 		
-		<form action="#" method="GET">
+			<form method="POST" name="orderform">
 	<fieldset>
 		<label for="name">Ваше имя</label><br> <br>
-		<input type="text" placeholder="Имя" name="mane"><br> <br>
+		<input type="text" placeholder="Имя" id="name" name="name"><br> <br>
 
 			<label for="tel">Ваш телефон для связи</label><br> <br>
-			<input type="tel" placeholder="+7 (999) 999-99-99" name="Mobile"><br> <br>
+			<input type="tel" placeholder="+7 (999) 999-99-99" id="phone" name="Mobile"><br> <br>
 
 			<label for="email">Ваш e-mail</label><br> <br>
-			<input type="tel" placeholder="name@mail.ru" name="mail"><br> <br>
+			<input type="tel" placeholder="name@mail.ru" id="mail" name="mail"><br> <br>
 
 			<div class="file-upload">
 				<label>
@@ -77,7 +77,7 @@
 			<textarea name="textarea" placeholder="Если фото нужно сделать цветным, добавить награды или ордена, напишите пожелания по одежде или военной форме, наградам. Если человек военный, по возможности указать кем он служил, когда было сделано фото и год." name="textarea"></textarea><br><br>
 			
 			<input class="styled"
-			type="button"
+			type="submit"
 			value="Отправить заказ"><br> <br>
 			Я согласен на обработку персональных данных
 			<input type="checkbox" name="PersonalAgree" value="checked" id="cb"><br> <br>
