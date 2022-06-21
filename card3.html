@@ -13,6 +13,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
 	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/menu.js" async></script>
+	<script src="js/store.js" async></script>
     <script src="js/main.js" async></script>
 	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
 	<title>Фотоальбомы</title>
@@ -34,41 +36,63 @@
 					<ul class="menu header__menu">
 						<li><a href="index1.html" class="href"> Обработка фото </a></li>
 						<li><a href="catalog.html" class="href" > Фотоальбомы </a></li>
+						<li><a href="game.html" class="href"> Игра </a></li>
 						<li><a href="Contact.html" class="href"> Контакты </a></li>
-						<li><a href="battle.html" class="href"> Игра </a></li>
+						
 					</ul>
 				</nav>
 			</div>
 		</header>
 		<div class="contact">
-			<img src="images/bag.png" alt="bag" />
+			<a href="catalog.html #cart"><img src="images/bag1.png" alt="bag" /></a>
 		</div>
 	</div>
 <div class="wrapper">
-	
-		<div class="imagedesk">
-			<div class="big">
-			<img src="images/books/13.JPG" alt="Старт">
-			</div>
-			<div class="small">	
-			<a href="images/books/1.jpg"><img src="images/books/1_mini.jpg" alt="мини1"/></a>
-			<a href="images/books/2.jpg"><img src="images/books/2_mini.jpg" alt="мини2"/></a>
-			</div>
-		</div>	
+	<div class="b2">
+	   <a href="catalog.html" <button class="buttonback" style="vertical-align:middle">	&#9668; В каталог<span></span></button></a>
+	</div>
+	<div class="imagedesk">
+		<div class="big">
+		<img class="shop-item-image" src="images/books/4.JPG" alt="Старт">
+		</div>
+		<div class="small">	
+		<a href="images/books/4.jpg"><img src="images/books/4_mini.jpg" alt="мини1"/></a>
+		<a href="images/books/10.jpg"><img src="images/books/10_mini.jpg" alt="мини2"/></a>
+		<a href="images/books/3.jpg"><img src="images/books/3_mini.jpg" alt="мини2"/></a>
+		</div>
+	</div>	
 	<div class='album'>
-		<h2>Фотоальбом "Самолеты"</h2>
-		<h6>1000 &#8381;</h6>
-		<h3>
-			Размеры: 30х20см</br>
-			Материал обложки: дерево</br>
-			Объем: 30 листов белого картона</br>
-			Вместимость: 120 фото 30х20 см</br>
-			Упаковка: подарочная коробка</br>
-			Доставка: 3-4 рабочих дня </br></br>
-		</h3>
+		<span class="shop-item-title"><h2>Фотоальбом "Друзья"</h2></span>
+		<span class="shop-item-price"><h6>3000 &#8381;</h6></span>
+		<span class="shop-item-description"><h3>
+			<h3>
+				Размеры: 30х20см</br>
+				Материал обложки: дерево</br>
+				Объем: 30 листов белого картона</br>
+				Вместимость: 120 фото 30х20 см</br>
+				Упаковка: подарочная коробка</br>
+				Доставка: 3-4 рабочих дня </br></br>
+			</h3>
+		</span>
 		<button class="btn btn-primary shop-item-button" type="button">В корзину</button>
 	</div>
+		
 
+	<section class="container content-section" id="cart">
+		<h2 class="section-header">Корзина</h2>
+		<div class="cart-row">
+			<span class="cart-item cart-header cart-column">Товар</span>
+			<span class="cart-price cart-header cart-column">Цена</span>
+			<span class="cart-quantity cart-header cart-column">Количество</span>
+		</div>
+		<div class="cart-items">
+		</div>
+		<div class="cart-total">
+			<strong class="cart-total-title">Всего</strong>
+			<span class="cart-total-price">Р0</span>
+		</div>
+		<button class="btn btn-primary btn-purchase" type="button">Заказать</button>
+	</section>
 </div>
 
 
@@ -89,7 +113,6 @@
 </nav>
 </div>
 
-	</footer> стаграм" /></span></center>
 	</footer> 
 	</body>
 	</html>
