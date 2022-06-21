@@ -1,0 +1,1074 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+@font-face {
+	font-family: "Constantia";
+	src: url("./fonts/Const/Constantia.woff") format("woff2"),
+		   url("./fonts/Const/Constantia.woff2") format("woff");
+   }
+*{
+	margin: 0px; padding: 0px;
+}
+
+body {
+	font-family: montserrat, sans-serif;
+	width: 100%;
+}
+
+/*ШАПКА С МЕНЮ*/
+.header {
+	width: 100%;
+	height: 100px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	justify-items:stretch;
+	z-index: 9999;
+	position: fixed;
+	border-bottom: 1px solid white;
+}
+
+.header > div.zero {
+	background-color: #0c0c0c;
+	grid-column: 1/2;
+	padding-top: 15px;
+	text-align: center;
+	padding-left: 30px;
+
+}
+
+h6 {
+	font-size: 36px; 
+	color: white; 
+	font-family: Constantia;
+	font-weight: normal;
+	line-height: 40px;
+}
+
+.header > div.contact {
+	background-color: #0c0c0c;
+	grid-column: 6/7;
+	padding-top: 0px;
+	text-align: end;
+	padding-right: 30px;
+	padding-top: 15px;
+}
+
+.contact img {
+	width: 50px;
+	height: auto;
+}
+
+.header > header {
+	background-color: #0c0c0c;
+	grid-column: 2/6;
+	padding-top: 15px;
+	z-index: 3;
+}
+
+
+
+a{
+	text-decoration: none; text-transform:uppercase ;
+	font-weight: 500;
+	color: white;
+}
+
+a:visited {
+	color: white;
+}
+
+a:hover {
+	color: #CD3408;
+}
+
+
+/*Новое меню*/
+
+
+.header__menu {
+    display: flex;
+	z-index: 2;
+}
+.header__menu li {
+	list-style: none;
+	margin: 0px 0px 0px 20px;
+	color: #000;
+	font-size: 16px;
+	text-transform: uppercase;
+	text-decoration: none;
+	z-index: 3;
+}
+
+
+/*ОСНОВНОЙ БЛОК*/
+
+
+
+.wrapper {
+    padding-top: 100px;
+	width: 100%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	background-color: #0c0c0c;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	z-index: 1;
+}
+
+.wrapper > div.main1 {
+	background-color: #0c0c0c;
+	grid-column: 1/5;
+	max-height: 513px;
+	padding-left: 10%;
+	padding-bottom: 30px;
+	float: right;
+	padding-top: 20px;
+}
+
+
+.b1 {
+    background-image: url(images/slide_1.jpg);
+    animation: perehod 6s infinite;
+	width: 750px;
+	height: 482px;
+	float: right;
+	border-radius: 50px;
+}
+
+@keyframes perehod {
+    from { background-image:url(images/slide_1.jpg);
+    }
+	50% {background-image:url(images/slide_2.jpg);}
+    to {
+        background-image:url(images/slide_1.jpg);
+    }
+}
+
+/* слайдер */
+.slider{
+    max-width: 800px;
+    position: relative;  	
+    margin: auto;
+    height: 514px;
+    margin-bottom: 15px;
+	border-radius: 50px;
+	float: right;
+}
+/* Картинка мастабируется по отношению к родительскому элементу */
+.slider .item img {
+    object-fit: cover;
+    width: 100%;
+    height: 514px;
+	margin-bottom: 3px;
+
+}
+/* Кнопки вперед и назад */
+
+.slider .prev, .slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/* При наведении на кнопки добавляем фон кнопок */
+.slider .prev:hover,
+.slider .next:hover {
+    background-color: #CD3408;
+}
+/* Заголовок слайда */
+
+/* Кружочки */
+.slider-dots {
+    text-align: center;
+
+}
+.slider-dots_item{
+    margin: 2px;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    background-color: #CD3408;
+    border-radius: 50%;
+    display: inline-block;
+
+}
+.active,
+.slider-dots_item:hover {
+    background-color: rgb(252, 252, 252);
+}
+/* Анимация слайдов */
+.slider .item {
+    animation-name: fade;
+    animation-duration: 3s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .5
+
+    }
+    to {
+        opacity: 1
+    }
+}
+
+/*КАРТИНКА ГЛАВНАЯ*/
+.main1 img {
+	border-radius: 50px;
+	display: block;
+	width: 800px;
+	height: 513px;  
+	float: right;
+}
+
+.wrapper > div.main2 {
+	background-color: #0c0c0c;
+	grid-column: 5/7;
+	max-height: 513px;
+	padding-right: 1em;
+	padding-left: 1em;
+	padding-bottom: 30px;
+	padding-top: 20px;
+	justify-items: start;
+}
+
+/*Кнопка ЗАКАЗАТЬ*/
+.button {
+	border-radius: 1px;
+	background-color: #CD4308;
+	border: 1px solid white;
+	border-radius: 5px;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 24px;
+	padding: 5px 5px 5px 5px;
+	width: 200px;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 5px;
+}
+
+.button span {
+	cursor: pointer;
+	position: relative;
+	transition: 0.5s;
+}
+
+.button span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+.button:hover span {
+	padding-right: 25px;
+}
+
+.button:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+
+/*Переход на реставрцию*/
+
+.wrapper > div.line{
+	padding-top: 20px;
+	background-color: #fff;
+	grid-column: 1/3;
+}
+
+.wrapper > div.zeroline {
+	padding-top: 20px;
+	background-color: #fff;
+	grid-column: 5/7;
+	text-align: center;
+	padding-right: 30px;
+}
+
+#r1, #r2, #r3 {
+	background-color: #fff;
+	grid-column: 3/5;
+	text-align: center;
+	min-width: 514px;
+
+}
+
+/*Блок с фото реставрация*/
+.wrapper > div.restore1 {
+	background-color: #fff;
+	grid-column: 1/3;
+	display: grid;
+	justify-items: end;
+	padding-left: 0;
+}
+
+.img, .img1 {
+	width: 100%;
+	max-height: 400px;
+	width: auto;
+}
+
+.img1 {
+	max-height: 400px;
+	bottom:0; 
+}
+
+.img {
+	padding-bottom: 20px;
+}
+
+.imggorizontal {
+	width:446px;
+	height:297px;
+}
+
+.wrapper > div.restore2 {
+	background-color: #fff;
+	grid-column: 3/5;
+	padding: 10px;
+	padding-bottom: 0;
+	display: grid;
+	justify-items: center;
+}
+
+.restore2 > div.restore22 {
+	min-height: 500px;
+	max-width: 446px;
+	background-color: #fff;
+	margin: auto;
+	display: grid;
+	justify-items: center;
+}
+
+.wrapper > div.restore3 {
+	background-color: #fff;
+	grid-column: 5/7;
+	padding-right: 10em;
+}
+
+/*Блок Фотомонтаж*/
+
+.wrapper > div.montage {
+	margin-top: 20px;
+	background-color: #0c0c0c;
+	padding-right: 20px;
+	grid-column: 1/4;
+	display: grid;
+	justify-items: end;
+}
+
+.montage2 img,
+.montage img {
+	width:675px;
+	height:450px;
+padding-top: 35px;
+}
+
+.wrapper > div.montage2 {
+	margin-top: 20px;
+	background-color: #0c0c0c;
+	padding-left: 20px;
+	grid-column: 4/7;
+}
+
+.wrapper > div.montage3{
+	padding-top: 35px;
+	padding-bottom: 35px;
+	background-color: #0c0c0c;
+	grid-column: 1/4;
+	padding-right: 20px;
+	display:flex;
+	justify-content: end;
+	
+}
+
+/*.montage3 > div {
+	display: grid;
+}*/
+
+
+.cat {
+
+	width:320px;
+	height:auto;
+}
+
+.catnomargin {
+	width:320px;
+	height:auto;
+	padding-right: 0;
+	margin-left: 35px;
+}
+
+.wrapper > div.montage4 {
+	padding-top: 35px;
+	padding-bottom: 35px;
+	background-color: #0c0c0c;
+	grid-column: 4/7;
+	padding-left: 20px;
+}
+
+/*РЕТУШЬ ПОРТРЕТОВ*/
+
+.wrapper > div.retouch {
+	padding-top: 20px;
+	padding-bottom: 35px;
+	background-color: #fff;
+	grid-column: 1/4;
+	padding-right: 20px;
+	display: flex;
+	justify-content: end;
+}
+
+.wrapper > div.retouch2 {
+	padding-top: 20px;
+	padding-bottom: 35px;
+	background-color: #fff;
+	grid-column: 4/7;
+	padding-left: 20px;
+	position: relative;
+	z-index: 2;}
+
+
+/* ЭТО ПРИМЕР СЛОЯ ВНИЗУ
+.box13 > div.box228 {
+	position: absolute;
+	z-index: -1;
+	color: red;
+	font-size: 100px;
+}*/
+
+/*Анимашка */
+
+.che {
+    position: absolute;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+	width: 200px;
+	margin: -20px;
+}
+@-moz-keyframes spin { 
+    50% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+    50% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
+
+/*как я работаю*/
+
+.wrapper > div.work {
+	padding-top: 10px;
+	background-color: #ffd4c2;
+	grid-column: 1/7;
+}
+
+.wrapper > div.tablezero
+{
+	grid-column: 1/2;
+	background-color: #ffd4c2;
+}
+
+.wrapper > div.table
+{
+	grid-column: 2/6;
+	width: 100%;
+	background-color:#ffd4c2;
+	padding-top: 30px;
+	display: flex;
+}
+
+.table > div.numb1,
+.table > div.numb2,
+.table > div.numb3 {
+	width: 350px;
+}
+
+
+.table > div.numb1 {
+background-image:url(images/one.png);
+background-size: contain;
+background-repeat: no-repeat
+}
+
+.table > div.numb2 {
+margin-left: 35px;
+margin-right: 35px;
+background-image:url(images/two.png);
+background-size: contain;
+background-repeat: no-repeat
+}
+
+
+.table > div.numb3 {
+	background-image:url(images/three.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.wrapper > div.tableend
+{
+	grid-column: 6/7;
+	background-color: #ffd4c2;
+}
+
+.wrapper > div.knopka {
+	text-align: center;
+	padding-bottom: 30px;
+	padding-top: 10px;
+	background-color: #ffd4c2;
+	grid-column: 1/7;
+}
+
+p { font-size: 30px;color: #000;font-weight: bold;
+	text-align: center;
+	display: inline;
+	margin: auto;
+	transform: translate(-50%, -50%);
+}
+
+p span {
+	font-size: 18px; color: #000; text-align: center;font-weight: normal; max-width: 446px;
+}
+
+
+h1 {
+	font-size: 30px;color: #CD4308;font-weight: bold;
+	text-align: center;
+	display: inline;
+	margin: auto;
+	transform: translate(-50%, -50%);
+}
+
+
+h2 {
+	font-size:2em; color: white; 
+	width: 412px;
+}
+
+h3 {
+	font-size: 1.2em;color: white; font-weight: normal;
+	width: 412px;
+}
+
+h4 {
+	font-size: 16px;
+	color: black; font-weight: normal; max-width: 550px;
+	padding-left: 5px;
+	width: 412px;
+}
+
+h4 span{
+	color: #CD4308;
+	font-weight:600;
+}
+
+h5 {
+	font-size: 16px; color: white; font-weight: normal;
+	max-width: 675px;
+}
+
+.z5 {
+	font-size: 18px; color: white; font-weight: normal;
+	max-width: 675px;
+	text-align: right;
+}
+
+h5 span{
+	color: #CD4308;
+	font-weight:600;
+}
+
+/*КНОПКА*/
+
+/*.border1 {
+	margin-top: 10px;
+	padding: 0;
+	width: 100%;
+	height: auto;
+	max-width: 600px;
+}*/
+
+footer {
+	display: grid;
+	line-height: 3em;
+	width: 100%;
+	color: #fff;
+	background-color: #0c0c0c;
+	grid-column: 1/7;
+	text-align: center;
+}
+
+footer > .footer__nav {
+	grid-column: 1/7;
+	justify-items: center;
+}
+
+footer ul {
+	grid-column: 1/7;
+	justify-content: center;
+}
+
+
+                     /*Каталог*/
+
+
+
+.wrapper > div.main3 {
+	background-color: #0c0c0c;
+	grid-column: 5/7;
+	max-height: 513px;
+	padding-right: 1em;
+	padding-left: 1em;
+	padding-bottom: 30px;
+	padding-top: 20px;
+	justify-items: start;
+}
+
+	.main3 > h2,
+	.main3 > h3 {
+	max-width: 320px;
+	}
+
+	.imagedesk {
+		padding-top: 35px;
+		grid-column: 1/4;
+		justify-self: end;
+		padding-bottom: 35px;
+	}
+	
+	
+	.album {
+		padding-top: 35px;
+		grid-column: 4/7;
+		padding-bottom: 35px;
+		padding-left: 30px;
+	}
+	
+	
+	.album h3 {
+		line-height: 30px;
+	}
+	
+	.album > h6{
+		font-weight: bold;
+		font-family: montserrat;
+		padding-bottom: 50px;
+		font-size: 30px;
+		padding-top: 20px;
+	}
+
+	.small img {
+		max-width: 148px;
+	}
+
+
+	/*КОРЗИНА*/
+
+	.section-header {
+		font-weight: bold;
+		color: #FFF;
+		text-align: center;
+		font-size: 2.5em;
+	}
+
+	.section-header{
+		width: 100%;
+	}
+
+	.btn {
+		text-align: center;
+		vertical-align: middle;
+		padding: .67em .67em;
+		cursor: pointer;
+	}
+
+	.btn-primary {
+		color: white;
+		background-color: #CD4308;
+		border: none;
+		border-radius: .3em;
+		font-weight: bold;
+	}
+	
+	.btn-primary:hover {
+		background-color: #dd9d82;
+	}
+
+
+	.content-section {
+		margin: 1em;
+	}
+	
+	.container {
+		grid-column: 1/7;
+		max-width: 900px;
+		margin: 0 auto;
+		padding: 0 1.5em;
+	}
+
+	.shop-items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	.cart-row {
+		display: flex;
+	}
+	
+	.cart-item {
+		width: 45%;
+	}
+	
+	.cart-price {
+		width: 20%;
+		font-size: 1.2em;
+		color: #FFF;
+	}
+	
+	.cart-quantity {
+		width: 35%;
+	}
+	
+	.cart-item-title {
+		color: #FFF;
+		margin-left: .5em;
+		font-size: 1.2em;
+	}
+	
+	.cart-item-image {
+		width: 75px;
+		height: auto;
+		border-radius: 10px;
+	}
+	
+	.btn-danger {
+		color: white;
+		background-color: #CD4308;
+		border: none;
+		border-radius: .3em;
+		font-weight: bold;
+	}
+	
+	.btn-danger:hover {
+		background-color: #CD4308;
+	}
+	
+	.cart-quantity-input {
+		height: 34px;
+		width: 50px;
+		border-radius: 5px;
+		border: 1px solid #CD4308;
+		background-color: #eee;
+		color: #333;
+		padding: 0;
+		text-align: center;
+		font-size: 1.2em;
+		margin-right: 25px;
+	}
+
+	.shop-item {
+		margin: 30px;
+	}
+	
+	.shop-item-title {
+		display: block;
+		width: 100%;
+		text-align: left;
+		font-weight: bold;
+		font-size: 1.5em;
+		color: rgb(255, 255, 255);
+		margin-bottom: 15px;
+		max-width: 225px;
+	}
+	
+	.shop-item-image {
+		height: 300px;
+	}
+
+	.shop-item-description {
+		max-width: 225px;
+		display: block;
+	}
+	
+	.shop-item-description p {
+		font-size: 14px;
+		color: white;
+	}
+
+	.shop-item-details {
+		display: flex;
+		align-items: center;
+		padding: 5px;
+	}
+	
+	.shop-item-price {
+		flex-grow: 1;
+		color: #FFF;
+	}
+	
+	.shop-items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	
+	.cart-header {
+		font-weight: bold;
+		font-size: 1.25em;
+		color: rgb(255, 255, 255);
+		text-align: center;
+	}
+	
+	.cart-column {
+		display: flex;
+		align-items: center;
+		border-bottom: 1px solid rgb(255, 255, 255);
+		margin-right: 1.5em;
+		padding-bottom: 10px;
+		margin-top: 10px;
+	}
+	
+	.cart-row:last-child {
+		border-bottom: 1px solid rgb(255, 255, 255);
+	}
+	
+	.cart-row:last-child .cart-column {
+		border: none;
+	}
+	
+	.cart-total {
+		text-align: end;
+		margin-top: 10px;
+		margin-right: 10px;
+	}
+	
+	.cart-total-title {
+		font-weight: bold;
+		font-size: 1.5em;
+		color: rgb(255, 255, 255);
+		margin-right: 20px;
+	}
+	
+	.cart-total-price {
+		font-size: 1.5em;
+		color: #CD3408;
+	}
+	
+	.btn-purchase {
+		display: block;
+		margin: 40px auto 80px auto;
+		font-size: 1.5em;
+	}
+
+/*Контакты*/
+
+.wrapper > div.contact1 {
+
+	padding-top: 180px;
+	grid-column: 1/7;
+	text-align: center;
+	justify-items: center;
+	display: grid;
+	justify-content: center;
+	padding-bottom: 30px;
+	background-color: #0c0c0c;
+	background-image: url(images/fonovoe1.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	animation: slide 50s linear infinite;
+}
+
+@keyframes slide {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 0%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+/*ФОРМА ЗАКАЗА УСЛУГИ*/
+textarea {
+	width: 80%;
+	height: 100px;
+	padding: 10px;
+}
+
+fieldset {
+	background-color: #FFF;
+	width: 600px;
+	height: auto;
+	padding: 35px;
+}
+
+input {
+	border-radius: 5px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+label {
+	font-weight: 500;
+	padding-bottom: 20px;
+
+	
+}
+
+.styled {
+		border: 0;
+		line-height: 2.5;
+		padding: 0 20px;
+		font-size: 16px;
+		text-align: center;
+		color: #fff;
+		border-radius: 10px;
+		background-color: #0c0c0c;
+	}
+	
+	.styled:hover {
+		background-color: #CD3408;
+	}
+	
+	.file-upload input[type="file"]{
+
+		display: none;/* скрываем input file */
+		
+		}
+		
+		/* задаем стили кнопки выбора файла*/
+		
+		.file-upload {
+		
+		position: relative;
+		overflow: hidden;
+		height: 40px;
+		background: #0c0c0c;
+		border-radius: 10px;
+		color: #fff;
+		text-align: center;
+		}
+		
+		.file-upload:hover {
+		background: #CD3408;
+		
+		}
+		
+		/* Растягиваем label на всю область блока .file-upload */
+		
+	
+		
+		/* стиль текста на кнопке*/
+		
+		.file-upload span {
+		
+		line-height: 40px;
+		
+		font-weight:bold;
+		
+		}
+ 		/*Превьюшка фоток*/
+		#preview1 
+		{
+			max-width: 100%;
+			max-height: 400px;
+			overflow: hidden;
+		}
+
+		#preview1 img {
+			max-width: 300px;
+			height: auto;
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Мозила все ломает, собака, пришлось дописывать код*/
+@-moz-document url-prefix() {
+	h1 {
+		font-size: 1.5em;
+	}
+
+	h4 {
+		font-size: 16px;
+	}
+
+.restore1 img,
+.restore3 img  {
+	max-width: 250px;
+	height: auto;
+}
+
+.wrapper > div.restore1 {
+	padding-left:0;
+}
+
+.wrapper > div.restore3 {
+	padding-right:0;
+}
+
+.imggorizontal {
+	max-width: 350px;
+	height: auto;
+} 
+
+
+
+}
+
+/*мозила кончився*/
+
+
+
+
+
+
+
+
+
+
+
+

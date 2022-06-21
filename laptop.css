@@ -1,0 +1,363 @@
+@media screen and (max-width: 1200px) { /*760 tablet*/
+    *{
+        margin: 0px; padding: 0px;
+    }
+    
+    body {
+        font-family: montserrat, sans-serif;
+        width: 100%;
+    }
+    
+    /*MENU*/
+    .header {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        position: fixed;
+        border-bottom: 1px solid white;
+    }
+
+    .header > div.zero {
+        padding-top: 15px;
+        text-align: center;
+        padding-left: 10px;
+    
+    }
+
+    .wrapper {
+        padding-top: 80px;
+    }
+
+    /*Превращаем горизонтельное меню в вертикальное*/
+    .header__nav {
+        display: flex;
+        z-index: 9999;
+        justify-content: center;
+        text-align: center;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        background: #0c0c0c;
+        box-shadow: #ccc;
+        width: 100%;
+        box-shadow: 0 4px 2px -2px rgba(36, 36, 36, 0.37);
+        /*Анимацию создаем свойством transition. Сначала задаем блоку 
+        смещение влево на 100% */
+        transition: all 0.4s ease;
+        left:-100%;
+        border-bottom: 1px solid white;
+    }
+
+       /* Само изменение свойств блока будет происходить при наступлении события —
+    клика по левой кнопки мыши. В CSS это событие будет проявляться 
+    добавлением класса «open-menu» в блок с меню рядом с классом «header__nav». 
+    Сразу запишем для селектора .header__nav.open-menu меняющееся свойство:*/
+
+    .header__nav.open-menu{
+        left:0;
+        z-index: 9999;
+    }
+
+
+    .header__menu {
+        display: block;
+        z-index: 2;
+    }
+ 
+    .header__menu li {
+        margin: 20px 0px 20px 0px;
+        font-size: 14px;
+        z-index: 3;
+        }
+
+    .menu-burger__header {
+        position: relative;
+        width: 40px; /*Размеры бургера*/
+        height: 35px;
+        display: block;
+        margin-left: 10px;
+        text-align: center;
+        z-index: 3;
+       }
+
+       /*Делаем полосочки в бургере*/
+       /*Это блоки с высотой 3 пикселя*/
+    .menu-burger__header span, .menu-burger__header:after, .menu-burger__header:before{
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        background: #ffffff;
+        margin: 0 auto;
+    }
+    .menu-burger__header span{
+        top: 16px;
+    }
+    .menu-burger__header:after, .menu-burger__header:before{
+        content: '';
+    }
+    .menu-burger__header:after{
+        bottom: 5px;
+    }
+    .menu-burger__header:before{
+        top: 5px;
+    }
+
+    /*плавное исчезновение среднего слоя 
+    бургера и одновременные повороты верхнего и 
+    нижнего слоев до образования крестика*/
+    .menu-burger__header.open-menu span {
+        opacity:0; 
+        transition: 0.5s; 
+    }
+    .menu-burger__header.open-menu:before {
+        transform: rotate(38deg);
+        top: 16px;
+        transition: 0.4s;
+    }
+    .menu-burger__header.open-menu:after {
+        transform: rotate(-38deg);
+        bottom: 16px;
+        transition: 0.4s;
+    }
+
+/*Основной блок*/
+
+    .wrapper {
+        width: 100%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+
+    h6 {
+        font-size: 26px; 
+        line-height: 26px;
+    }
+
+    .wrapper > div.main1 {
+        grid-column: 1/5;
+        justify-items: center;
+        padding-left: 0;
+        display: grid;
+        padding-top: 50px;
+    }
+
+
+
+    .slider .prev, .slider .next {
+        position: absolute;
+    }
+
+    .main1 img {
+     max-width: 740px;
+     height: auto;
+    }
+
+    .wrapper > div.main2 {
+        grid-column: 1/5;
+        display: grid;
+        justify-items: center;
+        margin-bottom: 0;
+    }
+
+    .main2 > .button {
+    margin: 0;
+    }
+
+    h2 {
+        font-size:2em; color: white; 
+        width: 100%;
+    }
+    
+    h3 {
+        font-size: 1.2em;color: white; font-weight: normal;
+        width: 100%;
+    }
+
+ 
+    .wrapper > div.line
+    {
+        grid-column: 1/2;
+    }
+
+    .wrapper > div.zeroline
+    {
+        grid-column: 4/5;
+    }
+    
+    #r1, #r2, #r3 {
+        grid-column: 2/4;
+    }
+
+    .wrapper > div.restore1 {
+        grid-column: 1/3;
+        justify-items: end;
+        margin-right: 10px;
+        display: none;
+    }
+
+    .wrapper > div.restore22 {
+        grid-column: 1/5;
+        padding-right: 0;
+    }
+
+    .wrapper > div.restore2 {
+        grid-column: 1/5;
+        padding-right: 0;
+    }
+
+    .wrapper > div.restore3 {
+        grid-column: 3/5;
+        display: none;
+    }
+
+
+
+    .wrapper > div.montage {
+        grid-column: 1/5;
+        justify-items: center;
+        padding-right:0;
+        margin-top: 0;
+    }
+
+    .wrapper > div.montage2 {
+        display: grid;
+        grid-column: 1/5;
+        justify-items: center;
+        padding-left: 0;
+        margin-top: 0;
+    }
+    
+    .wrapper > div.montage3 {
+        display: flex;
+        grid-column: 1/5;
+        justify-content:center;
+        padding-left: 0;
+        margin-top: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+    }
+
+
+    .catnomargin {
+        margin-left: 35px;
+    }
+
+    .wrapper > div.montage4 {
+        grid-column: 1/5;
+        display: grid;
+        justify-items: center;
+    }
+
+    .wrapper > div.retouch {
+        display: flex;
+        grid-column: 1/5;
+        justify-content:center;
+        padding-right: 0;
+    } 
+
+    .wrapper > div.retouch2 {
+        grid-column: 1/5;
+        padding-top: 0;
+        padding-bottom: 0;
+        display: grid;
+        justify-items: center;
+    }
+
+    .lohan >h4 {
+        width: 700px;
+        max-width: 100%;
+    }
+
+    .che {
+        margin-top: -240px;
+        margin-left: 500px;
+    }
+
+
+    .wrapper > div.work {
+        padding-left: 0;
+    }
+
+
+    .wrapper > div.tablezero {
+     order: 10;
+    }
+
+    .wrapper > div.table {
+        grid-column: 1/5;
+       }
+
+
+    .table > div.numb1 {
+        padding-left: 10px;
+    }
+
+/*КАТАЛОГ*/
+
+    .wrapper > div.main3 {
+        grid-column: 1/5;
+        display: grid;
+        justify-items: center;
+        margin-bottom: 0;
+    }
+
+    .main3 h2,
+    .main3 h3 {
+        max-width: 100%;
+    }
+
+    .wrapper > div.album1 {
+        grid-column: 2/3;
+        gap: 20px;
+     }
+     .wrapper > div.album2 {
+        grid-column: 3/4;
+     }
+     .wrapper > div.album3 {
+        grid-column: 2/3;
+     }
+     .wrapper > div.album4 {
+        grid-column: 3/4;
+     }
+     .wrapper > div.album5 {
+        grid-column: 2/3;
+     }
+     .wrapper > div.album6 {
+        grid-column: 3/4;
+     }
+     .wrapper > div.album7 {
+        grid-column: 2/3;
+     }
+     .wrapper > div.album8 {
+        grid-column: 3/4;
+     }
+     .wrapper > div.album9  {
+        grid-column: 2/3;
+     }
+     
+
+
+    .wrapper > div.album1,
+    .wrapper > div.album2,
+    .wrapper > div.album3,
+    .wrapper > div.album4,
+    .wrapper > div.album5,
+    .wrapper > div.album6,
+    .wrapper > div.album7,
+    .wrapper > div.album8,
+    .wrapper > div.album9 {
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+}
+
+    .wrapper > div.imagedesk{
+        grid-column: 1/3;
+    }
+    .wrapper > div.album{
+        grid-column: 3/5;
+    }
+
+
+
+}
