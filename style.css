@@ -63,6 +63,12 @@ h6 {
 	z-index: 3;
 }
 
+.header__menu {
+	display: grid;
+	justify-content: space-evenly;
+	justify-items: center;
+	z-index: 2;
+}
 
 
 a{
@@ -316,25 +322,103 @@ a:hover {
 	padding-left: 0;
 }
 
-.img, .img1 {
-	width: 100%;
-	max-height: 400px;
-	width: auto;
+.img, .img1, .img3,.img4 {
+	width: 266px;
+	height: 400px;
+	background-size: contain;
+	background-repeat: no-repeat;
 }
 
-.img1 {
+.img1, .img4 {
 	max-height: 400px;
 	bottom:0; 
 }
 
-.img {
+.img, .img3{
 	padding-bottom: 20px;
 }
+
+.img {
+	background-image: url(images/22.jpg);
+	animation: perehod1 6s infinite;
+}
+
+@keyframes perehod1 {
+    from { background-image:url(images/22.jpg);
+    }
+	50% {background-image:url(images/022.jpg);}
+    to {
+        background-image:url(images/22.jpg);
+    }
+}
+
+
+.img1 {
+	background-image: url(images/33.jpg);
+	animation: perehod2 6s infinite;
+}
+
+@keyframes perehod2 {
+    from { background-image:url(images/33.jpg);
+    }
+	50% {background-image:url(images/03.jpg);}
+    to {
+        background-image:url(images/33.jpg);
+    }
+}
+
+.img3 {
+	background-image: url(images/4.jpg);
+	animation: perehod3 6s infinite;
+}
+
+
+
+@keyframes perehod3 {
+    from { background-image:url(images/4.jpg);
+    }
+	50% {background-image:url(images/04.jpg);}
+    to {
+        background-image:url(images/4.jpg);
+    }
+}
+
+.img4 {
+	background-image: url(images/66.jpg);
+	animation: perehod4 6s infinite;
+}
+
+@keyframes perehod4 {
+    from { background-image:url(images/66.jpg);
+    }
+	50% {background-image:url(images/066.jpg);}
+    to {
+        background-image:url(images/66.jpg);
+    }
+}
+
+
+
 
 .imggorizontal {
 	width:446px;
 	height:297px;
+	background-image: url(images/555.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	animation: perehod5 6s infinite;
 }
+
+@keyframes perehod5 {
+    from { background-image:url(images/555.jpg);
+    }
+	50% {background-image:url(images/05555.jpg);}
+    to {
+        background-image:url(images/555.jpg);
+    }
+}
+
+
 
 .wrapper > div.restore2 {
 	background-color: #fff;
